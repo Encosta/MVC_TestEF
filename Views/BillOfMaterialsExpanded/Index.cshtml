@@ -1,0 +1,155 @@
+﻿@model IEnumerable<MVC_Test.Models.BillOfMaterialsExpanded>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BomLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopLevelItem)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.TopLevelDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComponentItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComponentDescription)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.QuantityPerTop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityPerParent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchasedOrManufactured)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScrapPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BomSequence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullSequence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasChild)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StandardCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LineCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManufacturerCodes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BomDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BomReference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BomRelease)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BomLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopLevelItem)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.TopLevelDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComponentItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComponentDescription)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.QuantityPerTop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityPerParent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchasedOrManufactured)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScrapPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BomSequence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullSequence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasChild)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StandardCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LineCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufacturerCodes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BomDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BomReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BomRelease)
+            </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BillOfMaterialsExpandedId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BillOfMaterialsExpandedId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BillOfMaterialsExpandedId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

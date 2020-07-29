@@ -1,0 +1,134 @@
+﻿@model MVC_Test.Models.BillOfMaterialsExpanded
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BillOfMaterialsExpanded</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BillOfMaterialsExpandedId" />
+            <div class="form-group">
+                <label asp-for="BomLevel" class="control-label"></label>
+                <input asp-for="BomLevel" class="form-control" />
+                <span asp-validation-for="BomLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TopLevelItem" class="control-label"></label>
+                <input asp-for="TopLevelItem" class="form-control" />
+                <span asp-validation-for="TopLevelItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TopLevelDescription" class="control-label"></label>
+                <input asp-for="TopLevelDescription" class="form-control" />
+                <span asp-validation-for="TopLevelDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentItem" class="control-label"></label>
+                <input asp-for="ParentItem" class="form-control" />
+                <span asp-validation-for="ParentItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentDescription" class="control-label"></label>
+                <input asp-for="ParentDescription" class="form-control" />
+                <span asp-validation-for="ParentDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentItem" class="control-label"></label>
+                <input asp-for="ComponentItem" class="form-control" />
+                <span asp-validation-for="ComponentItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentDescription" class="control-label"></label>
+                <input asp-for="ComponentDescription" class="form-control" />
+                <span asp-validation-for="ComponentDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantityPerTop" class="control-label"></label>
+                <input asp-for="QuantityPerTop" class="form-control" />
+                <span asp-validation-for="QuantityPerTop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantityPerParent" class="control-label"></label>
+                <input asp-for="QuantityPerParent" class="form-control" />
+                <span asp-validation-for="QuantityPerParent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurchasedOrManufactured" class="control-label"></label>
+                <input asp-for="PurchasedOrManufactured" class="form-control" />
+                <span asp-validation-for="PurchasedOrManufactured" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrapPercentage" class="control-label"></label>
+                <input asp-for="ScrapPercentage" class="form-control" />
+                <span asp-validation-for="ScrapPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BomSequence" class="control-label"></label>
+                <input asp-for="BomSequence" class="form-control" />
+                <span asp-validation-for="BomSequence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FullSequence" class="control-label"></label>
+                <input asp-for="FullSequence" class="form-control" />
+                <span asp-validation-for="FullSequence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentId" class="control-label"></label>
+                <input asp-for="ParentId" class="form-control" />
+                <span asp-validation-for="ParentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HasChild" class="control-label"></label>
+                <input asp-for="HasChild" class="form-control" />
+                <span asp-validation-for="HasChild" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StandardCost" class="control-label"></label>
+                <input asp-for="StandardCost" class="form-control" />
+                <span asp-validation-for="StandardCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LineCost" class="control-label"></label>
+                <input asp-for="LineCost" class="form-control" />
+                <span asp-validation-for="LineCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufacturerCodes" class="control-label"></label>
+                <input asp-for="ManufacturerCodes" class="form-control" />
+                <span asp-validation-for="ManufacturerCodes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BomDate" class="control-label"></label>
+                <input asp-for="BomDate" class="form-control" />
+                <span asp-validation-for="BomDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BomReference" class="control-label"></label>
+                <input asp-for="BomReference" class="form-control" />
+                <span asp-validation-for="BomReference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BomRelease" class="control-label"></label>
+                <input asp-for="BomRelease" class="form-control" />
+                <span asp-validation-for="BomRelease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
